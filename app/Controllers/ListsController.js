@@ -31,7 +31,10 @@ export default class ListsController {
         form.reset()
     }
     destroy(id) {
-        listsService.destroy(id)
+        if (window.confirm('Are you sure,you want to delete list?')) {
+            listsService.destroy(id)
+
+        }
     }
     addTask(listId) {
         debugger;
@@ -45,6 +48,10 @@ export default class ListsController {
         form.reset()
     }
     removeTask(id) {
-        listsService.removeTask(id)
+        if (window.confirm('Are you sure,you want to delete task?')) {
+            listsService.removeTask(id)
+
+
+        }
     }
 }
