@@ -7,14 +7,14 @@ export default class List {
     this.color = color
     this.id = id
   }
-
   get Template() {
     return `
-  <div class="col-md-3" id = "${this.id}">
+  <div class="col-md-5 text-center" id = "${this.id}">
     <div class="card mb-3">
-        <div class="d-flex align-items-center justify-content-between card-header text-center" style="background-color:${this.color}">
-            <h5 class="m-0">${this.name}</h5>
-            <button type="button" class="btn btn-outline-dark" onclick="app.listsController.destroy('${this.id}')"> X </button>
+        <div class=" d-flex align-items-center justify-content-between card-header text-center" style="background-color:${this.color}">
+        <h5 class="m-0  "> ${this.name} <p class="text-center ${this.id}">2/4</p></h5>
+        <button type="button" class="btn btn-outline-dark" onclick="app.listsController.destroy('${this.id}')"> X </button>
+        
         </div>
         <div class="card-body">
             <div id="tasks" class="d-flex flex-column justify-content-between">

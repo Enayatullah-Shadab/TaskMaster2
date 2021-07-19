@@ -50,8 +50,6 @@ export default class ListsController {
     removeTask(id) {
         if (window.confirm('Are you sure,you want to delete task?')) {
             listsService.removeTask(id)
-
-
         }
     }
 }
