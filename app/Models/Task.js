@@ -8,14 +8,14 @@ export default class Task {
     }
 
     get Template() {
-        return /*html*/`
+        return `
           
-          <div class="d-flex flex-row justify-content-between">
+          <div class="d-flex flex-row ">
             <div>
               <input type="checkbox" id="checkbox">
               <label for="checkbox">${this.task}</label>
             </div>
-              <span><i class="mdi mdi-15px mdi-trash-can" onclick="app.ListMasterController.deleteTask('${this.id}')"></i></span>
+              <span><i class="mdi mdi-15px mdi-trash-can" "></i></span>
           </div>`
     }
 }

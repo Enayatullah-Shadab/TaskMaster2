@@ -6,14 +6,12 @@ export default class List {
     this.name = name
     this.color = color
     this.id = id
-
   }
-
   get Template() {
     return `
   <div class="col-md-3" id = "${this.id}">
     <div class="card mb-3">
-        <div class="d-flex align-items-center justify-content-between card-header text-center" style="background-color:${this.color}">
+        <div class="d-flex align-items-center ${this.color}">
             <h5 class="m-0">${this.name}</h5>
             <button type="button" class="btn btn-outline-dark" onclick = "app.ListMasterController.deleteList('${this.id}')"> X </button>
         </div>
