@@ -38,7 +38,6 @@ export default class ListsController {
         form.reset()
     }
 
-
     destroy(id) {
         listsService.destroy(id)
     }
