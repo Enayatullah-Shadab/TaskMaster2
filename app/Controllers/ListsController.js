@@ -39,22 +39,22 @@ export default class ListsController {
     }
 
 
-    // destroy(id) {
-    //     pizzasService.destroy(id)
-    // }
+    destroy(id) {
+        listsService.destroy(id)
+    }
 
-    // addTopping(pizzaId) {
-    //     event.preventDefault()
-    //     let form = event.target
-    //     let rawTopping = {
-    //         pizzaId,
-    //         name: form.topping.value
-    //     }
-    //     pizzasService.addTopping(rawTopping)
-    //     form.reset()
-    // }
+    addTask(listId) {
+        event.preventDefault()
+        let form = event.target
+        let rawTask = {
+            listId,
+            name: form.task.value
+        }
+        listsService.addTask(rawTask)
+        form.reset()
+    }
 
-    // removeTopping(id) {
-    //     pizzasService.removeTopping(id)
-    // }
+    removeTask(id) {
+        listsService.removeTask(id)
+    }
 }

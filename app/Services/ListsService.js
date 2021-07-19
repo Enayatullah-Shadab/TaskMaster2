@@ -5,23 +5,27 @@ import Task from "../Models/Task.js"
 class ListsService {
 
     createLists(rawList) {
-        console.log(" in Service")
+        console.log(" in Service, creatList")
 
         ProxyState.lists = [...ProxyState.lists, new List(rawList)]
 
     }
 
-    //   addTopping(rawTopping) {
-    //     ProxyState.toppings = [...ProxyState.toppings, new Topping(rawTopping)]
-    //   }
+    addTask(rawTask) {
+        console.log(" in Service, addTask")
+        ProxyState.tasks = [...ProxyState.tasks, new Task(rawTask)]
+        debugger;
+    }
 
-    //   destroy(id) {
-    //     ProxyState.pizzas = ProxyState.pizzas.filter(pizza => pizza.id != id)
-    //     ProxyState.toppings = ProxyState.toppings.filter(topping => topping.pizzaId != id)
-    //   }
-    //   removeTopping(id) {
-    //     ProxyState.toppings = ProxyState.toppings.filter(topping => topping.id != id)
-    //   }
+    destroy(id) {
+        console.log(" in Service, destroy")
+        ProxyState.lists = ProxyState.lists.filter(list => list.id != id)
+        ProxyState.tasks = ProxyState.tasks.filter(task => task.listId != id)
+    }
+    removeList(id) {
+        console.log(" in Service, removeList")
+        ProxyState.lists = ProxyState.lists.filter(list => list.id != id)
+    }
 }
 
 export const listsService = new ListsService();
