@@ -15,20 +15,13 @@ export default class ListsController {
         ProxyState.on('tasks', _draw)
         ProxyState.on('lists', saveState)
         ProxyState.on('tasks', saveState)
-
         loadState()
-
-        // NOTE this is here so when the page first loads it draws the pizzas already in the proxystate
         _draw()
-
     }
 
-
     createList() {
-        // NOTE PREVENTS PAGE RELOADING
         event.preventDefault()
         let form = event.target
-        // console.log(form);
         let rawList = {
             name: form.name.value,
             color: form.color.value,
@@ -37,11 +30,9 @@ export default class ListsController {
         listsService.createList(rawList)
         form.reset()
     }
-
     destroy(id) {
         listsService.destroy(id)
     }
-
     addTask(listId) {
         debugger;
         event.preventDefault()
@@ -53,7 +44,6 @@ export default class ListsController {
         listsService.addTask(rawTask)
         form.reset()
     }
-
     removeTask(id) {
         listsService.removeTask(id)
     }

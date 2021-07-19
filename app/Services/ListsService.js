@@ -15,7 +15,6 @@ class ListsService {
         ProxyState.tasks = ProxyState.tasks.filter(task => task.listId != id)
     }
 
-
     addTask(rawTask) {
         console.log(" in Service, addTask")
         ProxyState.tasks = [...ProxyState.tasks, new Task(rawTask)]
