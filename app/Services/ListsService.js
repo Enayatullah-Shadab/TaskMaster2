@@ -4,7 +4,7 @@ import Task from "../Models/Task.js"
 
 class ListsService {
 
-    createLists(rawList) {
+    createList(rawList) {
         console.log(" in Service, creatList")
 
         ProxyState.lists = [...ProxyState.lists, new List(rawList)]

@@ -24,7 +24,7 @@ export default class ListsController {
     }
 
 
-    createLists() {
+    createList() {
         // NOTE PREVENTS PAGE RELOADING
         event.preventDefault()
         let form = event.target
@@ -34,7 +34,7 @@ export default class ListsController {
             color: form.color.value,
             id: form.id.value
         }
-        listsService.createLists(rawList)
+        listsService.createList(rawList)
         form.reset()
     }
 
