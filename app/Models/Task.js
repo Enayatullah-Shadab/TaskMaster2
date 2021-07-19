@@ -6,13 +6,13 @@ export default class Task {
     this.id = id
     this.listId = listId
   }
-
   get Template() {
     return `
-    <div  class="  text-wrap break-word d-flex flex-row justify-content-between ">
-    <div class="col-10">
+
+    <div  d-flex flex-row justify-content-between ">
+    <div class="test">
       <input text-wrap type="checkbox" id=${this.id}>
-      <label for="checkbox">${this.name}</label>
+      <label class="col-10 for="checkbox">${this.name}</label>
     </div>
       <span><i class="mdi mdi-15px mdi-trash-can" onclick="app.listsController.removeTask('${this.id}')"></i></span>
   </div>

@@ -9,10 +9,10 @@ export default class List {
   }
   get Template() {
     return `
-  <div class="col-md-5 text-center" id = "${this.id}">
+  <div class="col-md-4 text-center" id = "${this.id}">
     <div class="card mb-3">
         <div class=" d-flex align-items-center justify-content-between card-header text-center" style="background-color:${this.color}">
-        <h5 class="m-0  "> ${this.name} <p class="text-center ${this.id}">2/4</p></h5>
+        <h5 class="m-0"> ${this.name}</h5><p class="text-center ${this.id}">2/4</p>
         <button type="button" class="btn btn-outline-dark" onclick="app.listsController.destroy('${this.id}')"> X </button>
         
         </div>
