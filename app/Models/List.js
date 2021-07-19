@@ -18,16 +18,16 @@ export default class List {
         </div>
         <div class="card-body">
             <div id="tasks" class="d-flex flex-column justify-content-between">
-            ${this.list}
+            ${this.MyTasks}
             </div>
             <div>
-                <form onsubmit="app.ListsController.createTask('${this.id}')" class="d-flex justify-content-between line">
+                <form onsubmit="app.listsController.addTask('${this.id}')" class="d-flex justify-content-between line">
                     <div class="form-group mx-2">
-                        <input type="text" name="task" id="task" class="form-control" placeholder="Add Task..." minLength-3 maxLength-50
+                        <input type="text" name="tname" id=${this.id} class="form-control" placeholder="Add Task..." minLength-3 maxLength-50
                             required>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-outline-dark"><i class="mdi mdi-plus"></i></button>
+                        <button type="submit" class="btn btn-outline-dark"><i class="mdi mdi-plus" ></i></button>
                     </div>
                 </form>
             </div>
@@ -38,10 +38,9 @@ export default class List {
   get MyTasks() {
     let template = ''
     let tasks = ProxyState.tasks.filter(task => task.listId === this.id)
-    task.forEach(task => {
+    tasks.forEach(task => {
       template += task.Template
-
     })
-
+    return template
   }
 }

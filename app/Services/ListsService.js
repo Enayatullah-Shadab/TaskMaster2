@@ -22,9 +22,15 @@ class ListsService {
         ProxyState.lists = ProxyState.lists.filter(list => list.id != id)
         ProxyState.tasks = ProxyState.tasks.filter(task => task.listId != id)
     }
-    removeList(id) {
-        console.log(" in Service, removeList")
-        ProxyState.lists = ProxyState.lists.filter(list => list.id != id)
+    // removeList(id) {
+    //     debugger;
+    //     console.log(" in Service, removeList")
+    //     ProxyState.lists = ProxyState.lists.filter(list => list.id != id)
+    // }
+    removeTask(id) {
+        debugger;
+        console.log(" in Service, removeTask")
+        ProxyState.tasks = ProxyState.tasks.filter(task => task.listId != id)
     }
 }
 
