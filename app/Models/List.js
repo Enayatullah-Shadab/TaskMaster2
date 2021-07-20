@@ -2,10 +2,11 @@ import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/GenerateId.js"
 
 export default class List {
-  constructor({ name, color, id = generateId() }) {
+  constructor({ name, color, id = generateId(), checkCount }) {
     this.name = name
     this.color = color
     this.id = id
+    this.checkCount = checkCount
   }
   get Template() {
     return `
@@ -14,7 +15,7 @@ export default class List {
         <div class=" d-flex align-items-center justify-content-between card-header text-center" style="background-color:${this.color}">
         <h5 class="m-0"> ${this.name}</h5><p class="text-center ${this.id}">2/4</p>
         <button type="button" class="btn btn-outline-dark" onclick="app.listsController.destroy('${this.id}')"> X </button>
-        
+        <p class= "${this.checkCount}" </p>
         </div>
         <div class="card-body">
             <div id="tasks" class="d-flex flex-column justify-content-between">

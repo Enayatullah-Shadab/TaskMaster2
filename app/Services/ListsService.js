@@ -7,6 +7,8 @@ class ListsService {
     createList(rawList) {
         console.log(" in Service, creatList")
         ProxyState.lists = [...ProxyState.lists, new List(rawList)]
+        let foundList = ProxyState.lists.find(l => l.id == rawTask.listId)
+        foundList.checkCount++
 
     }
     destroy(id) {
@@ -18,11 +20,10 @@ class ListsService {
     addTask(rawTask) {
         console.log(" in Service, addTask")
         ProxyState.tasks = [...ProxyState.tasks, new Task(rawTask)]
-        debugger;
     }
 
     removeTask(id) {
-        debugger;
+
         console.log(" in Service, removeTask")
         ProxyState.tasks = ProxyState.tasks.filter(task => task.id != id)
     }

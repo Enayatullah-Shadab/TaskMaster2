@@ -52,4 +52,9 @@ export default class ListsController {
             listsService.removeTask(id)
         }
     }
+    checked(id) {
+        listsService.checked(id)
+        saveState()
+        _draw
+    }
 }
