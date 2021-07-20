@@ -37,7 +37,6 @@ export default class ListsController {
         }
     }
     addTask(listId) {
-        debugger;
         event.preventDefault()
         let form = event.target
         let rawTask = {
