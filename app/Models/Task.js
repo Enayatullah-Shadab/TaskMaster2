@@ -12,9 +12,9 @@ export default class Task {
     return `
 
     <div  d-flex flex-row justify-content-start">
-    <div class="test">
-      <input text-wrap type="checkbox" id=${this.id}  onclick="app.listsController.checked('${this.id}')" ${this.check ? "checked" : ""} >
-      <label class="col-10 for="checkbox"> ${this.name}</label>
+    <div class="m-0">
+      <input  type="checkbox" id=${this.id}  onclick="app.listsController.checked('${this.id}')" ${this.check ? "checked" : ""} >
+      <label class="col-10" for="checkbox"> ${this.name}</label>
     </div>
       <span><i class="mdi mdi-15px mdi-trash-can" onclick="app.listsController.removeTask('${this.id}')"></i></span>
   </div>
